@@ -764,11 +764,11 @@ html[data-theme="dark"] .count {color:var(--cp-text-soft)}
    <path class="source-line" d="M504 643 L504 675 M849 643 L849 675"/>
  </g>
  <g id="right-sized" class="board-item" data-from="19" data-to="19" ><path class="ink-line accent" pathLength="1" d="M553 678 Q678 687 812 678"/></g>
- <g id="token-result" class="board-item" data-from="20" data-to="21" >
+ <g id="token-result" class="board-item" data-from="20" >
    <rect x="300" y="625" width="338" height="68" rx="9" class="accent-outline"/>
    <text x="330" y="675" class="metric-number" text-anchor="start">80%</text><text x="447" y="654" class="sketch-text" text-anchor="start">fewer tokens</text><text x="448" y="679" class="sketch-small" text-anchor="start">reported result</text>
  </g>
- <g id="speed-result" class="board-item" data-from="21" data-to="21" >
+ <g id="speed-result" class="board-item" data-from="21" >
    <rect x="658" y="625" width="411" height="68" rx="9" class="accent-outline"/>
    <text x="681" y="675" class="metric-number" text-anchor="start">2x</text><text x="765" y="654" class="sketch-text" text-anchor="start">response-generation speed</text><text x="767" y="679" class="sketch-small" text-anchor="start">versus traditional APIs</text>
  </g>
@@ -982,7 +982,7 @@ function syncBoard() {
   document.getElementById('board-status').textContent=state===24?'The complete picture':'Build '+(state+1)+' of '+storySteps.length;
   document.getElementById('board-description').textContent=entry.copy;
   document.getElementById('live-story').textContent='Build '+(state+1)+'. '+entry.copy;
-  document.getElementById('evaluation-note').hidden=!(state>=20&&state<=21);
+  document.getElementById('evaluation-note').hidden=!(state>=20);
   updateCamera();
 }
 const chaptersMeta=["Same model, different results","The work around the task","Beyond the pricing deck","Working set and memory","From lookups to context","Enough context, not everything","An answer grounded in work"];
